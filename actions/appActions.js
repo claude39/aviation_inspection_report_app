@@ -36,7 +36,7 @@ export const editUser = (user) => {
     }
 }
 
-export const deletSchedule = (user, id) => {
+export const deleteSchedule = (user, id) => {
     return dispatch => {
         dispatch({ type: types.DELETE_SCHEDULE, id: id, user: user })
     }

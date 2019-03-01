@@ -32,6 +32,8 @@ const app = (state = initalState, action) => {
             return { ...state, currentUser: action.user }
         case types.LOGOUT:
             return { ...state, currentUser: null }
+        case types.DELETE_SCHEDULE:
+            return { ...state, users: state.users.map(user => user.index === action.user.index ? { ...user, schedules: user.schedules.filter(schedule => schedule.id !== action.id) } : user) }
         case 'REHYDRATE':
             return { ...state, ...action.payload.dataReducer }
         default:

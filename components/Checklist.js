@@ -9,7 +9,7 @@ import RNHTMLtoPDF from 'react-native-html-to-pdf'
 import RNPrint from 'react-native-print'
 import { Actions } from 'react-native-router-flux';
 
-import { deletSchedule } from '../actions/appActions'
+import { deleteSchedule } from '../actions/appActions'
 import { connect } from 'react-redux';
 
 class CheckList extends React.Component {
@@ -106,7 +106,7 @@ img {
         let results = await RNHTMLtoPDF.convert(options)
 
         await RNPrint.print({ filePath: results.filePath }).then(() => {
-            this.props.deletSchedule(this.props.currentUser, this.state.id)
+            this.props.deleteSchedule(this.props.currentUser, this.state.id)
             Actions.home()
         })
     }
@@ -476,7 +476,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = {
-    deletSchedule
+    deleteSchedule
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(CheckList)
