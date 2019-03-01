@@ -154,35 +154,6 @@ img {
                                     }
                                 </Card>
                             )}
-                            <Card title='Additional Inforrmation' titleStyle={{ ...robotoWeights.light, fontWeight: 'bold' }} >
-
-                                <ListItem rightElement={
-                                    <Picker
-                                        selectedValue={this.state.flightcrewlicense}
-                                        style={{ ...robotoWeights.light, height: 75, width: 110 }}
-                                        onValueChange={(itemValue, itemIndex) => this.setState({ flightcrewlicense: itemValue })
-                                        }>
-                                        <Picker.Item label="S" value="Satisfactory" style={{ fontSize: 10 }} />
-                                        <Picker.Item label="U" value="Unsatisfactory" style={{ fontSize: 10 }} />
-                                        <Picker.Item label="NS" value="Not Seen" style={{ fontSize: 10 }} />
-                                        <Picker.Item label="NA" value="Not Applicable" style={{ fontSize: 10 }} />
-                                    </Picker>
-                                }
-                                    subtitle={`Status: ${this.state.flightcrewlicense}`} title={'Flight Crew License'} containerStyle={{ width: '100%', alignItems: 'flex-start', backgroundColor: 'rgba(1,89,166, 0.4)', margin: 10 }} titleStyle={{ ...robotoWeights.light, fontSize: 15, fontWeight: 'bold' }} />
-                                <ListItem rightElement={
-                                    <Picker
-                                        selectedValue={this.state.medicallicense}
-                                        style={{ ...robotoWeights.light, height: 75, width: 110 }}
-                                        onValueChange={(itemValue, itemIndex) => this.setState({ medicallicense: itemValue })
-                                        }>
-                                        <Picker.Item label="S" value="Satisfactory" style={{ fontSize: 10 }} />
-                                        <Picker.Item label="U" value="Unsatisfactory" style={{ fontSize: 10 }} />
-                                        <Picker.Item label="NS" value="Not Seen" style={{ fontSize: 10 }} />
-                                        <Picker.Item label="NA" value="Not Applicable" style={{ fontSize: 10 }} />
-                                    </Picker>
-                                }
-                                    subtitle={`Status: ${this.state.medicallicense}`} title={'Medical License'} containerStyle={{ width: '100%', alignItems: 'flex-start', backgroundColor: 'rgba(1,89,166, 0.4)', margin: 10 }} titleStyle={{ ...robotoWeights.light, fontSize: 15, fontWeight: 'bold' }} />
-                            </Card>
 
                             <View style={{ alignItems: 'center' }}>
                                 <TouchableOpacity onPress={this.generatePDF} style={{ borderWidth: 1, borderColor: 'white', height: 50, justifyContent: 'center', alignItems: 'center', borderRadius: 5, margin: 5, width: 200 }}>
